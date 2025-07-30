@@ -45,7 +45,7 @@ export default function AppNavbar() {
           <DrawerHeader>
             <DrawerTitle>Navigation</DrawerTitle>
           </DrawerHeader>
-          <div className="m-2 grid grid-cols-3 gap-4">
+          <div className="m-2 grid grid-cols-2 gap-4">
             {headerItems.map((item) => (
               <Link
                 className="flex flex-col items-center justify-center gap-2 rounded-xl border p-4"
