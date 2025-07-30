@@ -1,4 +1,5 @@
 <img width="2940" height="1838" alt="CleanShot 2025-07-30 at 15 31 23@2x" src="https://github.com/user-attachments/assets/cb6c8ab7-b990-4d8c-b4f2-c9ed606101ce" />
+
 # 📊 InsightBoard AI — Smart Dashboard Application
 
 A full-stack AI-powered dashboard built for *InsightBoard AI*, a fictional productivity SaaS. This application allows users to:
