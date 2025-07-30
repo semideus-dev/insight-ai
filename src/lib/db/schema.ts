@@ -4,9 +4,9 @@ import {
   pgTable,
   text,
   timestamp,
+  varchar,
 } from "drizzle-orm/pg-core";
 import { nanoid } from "nanoid";
-
 
 export const user = pgTable("user", {
   id: text("id").primaryKey(),
@@ -69,16 +69,12 @@ export const verification = pgTable("verification", {
   ),
 });
 
-export const uploadedFiles = pgTable("uploaded_file", {
-  id: text("id").primaryKey().$defaultFn(() => nanoid()),
-  s3Key: text("s3_key").notNull(),
-  displayName: text("display_name"),
-  uploadedStatus: boolean("uploaded_status")
-    .$defaultFn(() => false)
-    .notNull(),
-  status: text("status")
-    .$defaultFn(() => "queued")
-    .notNull(),
+export const projects = pgTable("project", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => nanoid()),
+  name: text("name").notNull(),
+  transcript: text("description").notNull(),
   createdAt: timestamp("created_at").$defaultFn(
     () => /* @__PURE__ */ new Date()
   ),
@@ -90,19 +86,25 @@ export const uploadedFiles = pgTable("uploaded_file", {
     .references(() => user.id, { onDelete: "cascade" }),
 });
 
-export const clips = pgTable("clips", {
-  id: text("id").primaryKey().$defaultFn(() => nanoid()),
-  s3Key: text("s3_key").notNull(),
+export const tasks = pgTable("tasks", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => nanoid()),
+  projectId: text("project_id").references(() => projects.id, {
+    onDelete: "cascade",
+  }),
+  description: text("description"),
+  title: text("title"),
+  status: varchar("status", { length: 20 }).notNull().default("pending"),
+  priority: varchar("priority", { length: 20 }).notNull().default("medium"),
+  tags: text("tags").array(),
+  owner: text("owner"),
+  dueDate: timestamp("due_date"),
   createdAt: timestamp("created_at").$defaultFn(
     () => /* @__PURE__ */ new Date()
   ),
   updatedAt: timestamp("updated_at").$defaultFn(
     () => /* @__PURE__ */ new Date()
   ),
-  uploadedFileId: text("uploaded_file_id")
-    .notNull()
-    .references(() => uploadedFiles.id, { onDelete: "cascade" }),
-  userId: text("user_id")
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
+  completedAt: timestamp("completed_at"),
 });

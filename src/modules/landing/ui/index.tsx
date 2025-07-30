@@ -1,6 +1,6 @@
 import React from "react";
 import LightRays from "./components/light-rays";
-import Navbar from "./components/navbar";
+import Navbar from "../../../components/custom/landing-navbar";
 import Hero from "./components/hero";
 
 export default function LandingView() {
@@ -9,7 +9,7 @@ export default function LandingView() {
       <div className="-z-10 w-full h-full fixed">
         <LightRays
           raysOrigin="top-center"
-          raysColor="#00ffff"
+          raysColor="#8b5cf6"
           raysSpeed={1.5}
           lightSpread={0.8}
           rayLength={1.2}

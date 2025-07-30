@@ -11,7 +11,7 @@ export default function AuthLayout({
       <div style={{ width: "100%", height: "600px", position: "fixed" }}>
         <LightRays
           raysOrigin="top-center"
-          raysColor="#00ffff"
+          raysColor="#8b5cf6"
           raysSpeed={1.5}
           lightSpread={0.8}
           rayLength={1.2}

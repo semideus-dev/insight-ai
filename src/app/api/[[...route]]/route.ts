@@ -3,6 +3,7 @@ import { handle } from "hono/vercel";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import env from "@/lib/env";
 
+
 const app = new Hono().basePath("/api");
 
 const genAI = new GoogleGenerativeAI(env.geminiApiKey!);
@@ -11,7 +12,7 @@ app.post("/generate-tasks", async (c) => {
   const { transcript } = await c.req.json();
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     const prompt = `
       Analyze this meeting transcript and extract:
@@ -19,11 +20,13 @@ app.post("/generate-tasks", async (c) => {
       2. Actionable tasks with:
          - id: generated UUID
          - text: clear task description
+         - title: shorter more brief
          - status: "pending"
          - priority: "high", "medium", or "low" (high=critical blocker, medium=important, low=backlog)
          - owner: person responsible
          - deadline: specific date if mentioned
          - createdAt: current timestamp
+         - tags: relevant team tags (e.g., "@Tech", "@Marketing")
 
       Meeting format:
       **Meeting Title:** [title]
@@ -53,8 +56,9 @@ app.post("/generate-tasks", async (c) => {
 
     try {
       const jsonString = text.replace(/```json|```/g, "").trim();
-      const data = JSON.parse(jsonString);
-      return c.json(data);
+      const { title, tasks: generatedTasks } = JSON.parse(jsonString);
+
+      return c.json(generatedTasks);
     } catch (parseError) {
       console.error("Parsing error:", parseError);
       throw new Error("Failed to parse Gemini response");
