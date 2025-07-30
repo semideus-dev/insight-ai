@@ -11,6 +11,11 @@ A full-stack AI-powered dashboard built for *InsightBoard AI*, a fictional produ
 
 ---
 
+## Flowchart
+
+<img width="2940" height="1838" alt="CleanShot 2025-07-30 at 15 31 23@2x" src="https://kroki.io/mermaid/svg/eNp1Uk1vozAQvfdXzKm3qD8gUiU-AqVJquyS9oJyMGQEo4CN7GGrbNX_vrYhlEpdTmO_92bmPVNr0TdwjO_AfkHxalBDUFVoDBrIpKG64VAJfYYgO8Fq9QjhRzBwg5KpEkxKfq7vvDi0KCwgPHt6VMTCNKVv8Ub4flp_sV8U_6CIi52qST7kVMuhh4OocRLF4wLTwMifNkU-lB0x7BGZZA1HLaSpNPUMidLdJN24eQtoFN1GJkWQwUEr59v1WEGKHUmC3W4_NUhcgxQlaruosRk576JsETLGzsC91ZPSxITuYG2p1VHUxvdPi5hM34orHIW5GFAS5lROk53UM58-_BNkku2gig28Ezej6nNc5Mktshf6ApHq-hYZ4QFi9IWftaAl1No-Fs-V5hu6mJYVb2QG0dJfdPZrbf1b8wdCiBqhefI-kp8X5NFGeb2ZvlpVKPSs8jIzlLX_vUJRXVCe_aXP0lfu5jsvFixKYXAmbouDMmzXyn_tXGgvqOTpP-JEKxvaYko0V5u5Sucqm6vn7w39Q-esbBZ-Ie99OwaxddhvZE34Zwmn63_Lru-F" />
+
+
 ## ✅ Completed Levels
 
 •⁠  ⁠*Level 1* — Core Features ✅  
