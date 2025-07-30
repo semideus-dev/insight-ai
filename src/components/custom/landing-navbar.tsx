@@ -35,19 +35,6 @@ export default async function Navbar() {
             </Link>
           </div>
         ) : (
-          <div className="flex items-center gap-8">
-            <Link
-              className="hover:underline underline-offset-8 hover:text-primary"
-              href="/explore"
-            >
-              Explore
-            </Link>
-            <Link
-              className="hover:underline underline-offset-8 hover:text-primary"
-              href="/pricing"
-            >
-              Pricing
-            </Link>
             <Link
               className="hover:underline underline-offset-8 hover:text-primary"
               href="/sign-in"
