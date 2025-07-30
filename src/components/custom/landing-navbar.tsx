@@ -41,7 +41,7 @@ export default async function Navbar() {
             >
               Login
             </Link>
-          </div>
+          
         )}
       </div>
     </div>
