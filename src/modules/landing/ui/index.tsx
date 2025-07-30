@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 export default function LandingView() {
   return (
     <>
-      <section className="flex flex-col items-center">
+      <section className="flex flex-col items-center pb-16">
         <div className="-z-10 w-full h-full fixed">
           <LightRays
             raysOrigin="top-center"
