@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="border-t">
+    <footer className="border-t hidden md:flex">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <Link
           href={"/"}
