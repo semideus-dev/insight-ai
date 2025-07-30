@@ -14,16 +14,8 @@ export const headerItems = [
   {
     title: "Projects",
     link: "/projects",
-    icon:  ProjectIcon,
+    icon: ProjectIcon,
   },
-  {
-    title: "Billing",
-    link: "/billing",
-    icon: BillingIcon,
-  },
-];
-
-export const footerItems = [
   {
     title: "Settings",
     link: "/settings",

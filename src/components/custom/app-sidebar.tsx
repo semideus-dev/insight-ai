@@ -12,7 +12,7 @@ import {
   SidebarMenu,
 } from "@/components/ui/sidebar";
 
-import { headerItems, footerItems } from "@/lib/constants";
+import { headerItems } from "@/lib/constants";
 import SignOutButton from "@/modules/auth/ui/components/sign-out-button";
 import { AppLogo } from "../icons";
 
@@ -43,15 +43,6 @@ export default function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="flex flex-col items-center gap-10">
-              {footerItems.map((item) => (
-                <Link
-                  href={item.link}
-                  key={item.link}
-                  className="hover:bg-muted/80 rounded-xl p-2"
-                >
-                  <item.icon />
-                </Link>
-              ))}
               <SignOutButton />
             </SidebarMenu>
           </SidebarGroupContent>

@@ -17,7 +17,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
-import { headerItems, footerItems } from "@/lib/constants";
+import { headerItems } from "@/lib/constants";
 import Link from "next/link";
 import {
   SignOutDialog,
@@ -30,7 +30,6 @@ export default function AppNavbar() {
   const pathname = usePathname();
   const title = getPageTitle(pathname);
 
-  const navItems = headerItems.concat(footerItems);
   const [open, setOpen] = React.useState(false);
 
 
@@ -47,7 +46,7 @@ export default function AppNavbar() {
             <DrawerTitle>Navigation</DrawerTitle>
           </DrawerHeader>
           <div className="m-2 grid grid-cols-3 gap-4">
-            {navItems.map((item) => (
+            {headerItems.map((item) => (
               <Link
                 className="flex flex-col items-center justify-center gap-2 rounded-xl border p-4"
                 href={item.link}
