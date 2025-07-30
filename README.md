@@ -1,33 +1,67 @@
-# 🧠 InsightBoard AI Dashboard
-
 <img width="2940" height="1838" alt="CleanShot 2025-07-30 at 15 31 23@2x" src="https://github.com/user-attachments/assets/cb6c8ab7-b990-4d8c-b4f2-c9ed606101ce" />
+# 📊 InsightBoard AI — Smart Dashboard Application
 
+A full-stack AI-powered dashboard built for *InsightBoard AI*, a fictional productivity SaaS. This application allows users to:
 
-Smart dashboard powered by AI to turn meeting transcripts into actionable insights.
-
-## ✨ Features
-
-This project implements **all Level 1**, **all Level 2**, and selected **Level 3** features (authentication and auto-tagging) from the assignment.
-
-### ✅ Level 1 — Core
-- 📥 Submit meeting transcripts via a clean UI.
-- 🤖 AI-generated action items using **Gemini** (Google's LLM).
-- 🗂️ Interactive task list with mark-complete & delete.
-- 📊 Pie chart showing task progress (pending vs. completed).
-- 💅 Responsive modern UI (ShadCN + Tailwind CSS).
-- 🚀 Deployed and publicly accessible.
-
-### 🌟 Level 2 — Enhancements
-- 🔍 Task filter by status, priority, or keyword.
-- 🔄 Sort tasks by creation date, priority, or status.
-- 📈 Bar chart for priority distribution.
-- 🛢️ PostgreSQL database integration using **Drizzle ORM**.
-
-### 🚀 Level 3 — Advanced (Partial)
-- 🔐 Authentication using BetterAuth.
-- 🏷️ AI-powered auto-tagging of tasks (e.g., `@Marketing`, `@Tech`).
+•⁠  ⁠✍️ Submit meeting transcripts  
+•⁠  ⁠✅ Generate actionable items using LLM  
+•⁠  ⁠📈 Track and visualize task progress  
+•⁠  ⁠🔐 Authenticate users and auto-tag tasks
 
 ---
+
+## ✅ Completed Levels
+
+•⁠  ⁠*Level 1* — Core Features ✅  
+•⁠  ⁠*Level 2* — Enhanced Features ✅  
+•⁠  ⁠*Level 3* — Implemented Auto-Tagging & Authentication ✅
+
+---
+
+## ⚙️ Tech Stack
+
+### 🧠 AI + Backend
+•⁠  ⁠*LLM API: Google **Gemini*
+•⁠  ⁠*Backend Framework*: [Hono](https://hono.dev/) (TypeScript)
+•⁠  ⁠*ORM*: [Drizzle ORM](https://orm.drizzle.team/)
+•⁠  ⁠*Database: **PostgreSQL* hosted on [Neon](https://neon.tech)
+
+### 🖼️ Frontend
+•⁠  ⁠*Framework*: [Next.js](https://nextjs.org/) 15 (App Router)
+•⁠  ⁠*Language*: TypeScript
+•⁠  ⁠*UI Kit*: [ShadCN](https://ui.shadcn.com/) + Tailwind CSS
+•⁠  ⁠*Charts*: [Recharts](https://recharts.org/)
+
+### ☁️ Hosting & Deployment
+•⁠  ⁠*Frontend*: [Vercel](https://vercel.com)
+•⁠  ⁠*Database*: [Neon PostgreSQL](https://neon.tech)
+
+---
+
+## 🚀 Features Implemented
+
+### Level 1 – Core
+•⁠  ⁠📝 Transcript submission form
+•⁠  ⁠🔧 AI-powered action item generation using Gemini
+•⁠  ⁠✅ Mark task complete / delete functionality
+•⁠  ⁠🥧 Pie chart for progress visualization
+•⁠  ⁠📱 Modern, responsive UI with Shadcn + Tailwind
+•⁠  ⁠🌍 Deployed on Vercel with public access
+
+### Level 2 – Enhancements
+•⁠  ⁠🔍 Filter/sort by status and priority
+•⁠  ⁠🧠 AI-generated priorities (High, Medium, Low)
+•⁠  ⁠📊 Bar chart of tasks by priority
+•⁠  ⁠🗃️ Persistent data with PostgreSQL + Drizzle ORM
+
+### Level 3 – Advanced
+•⁠  ⁠🔐 Basic authentication
+•⁠  ⁠🏷️ AI-powered team auto-tagging (@Marketing, @Tech)
+•⁠  ⁠🌐 Database hosted on *Neon*
+<!-- - 🧪 (Optional) Testing (planned or partial) -->
+
+---
+
 
 ## 🧰 Tech Stack
 
@@ -45,7 +79,7 @@ This project implements **all Level 1**, **all Level 2**, and selected **Level 3
 
 ## 🔗 Live Demo
 
-🌍 [Hosted App Link](https://your-deployed-url.com)
+🌍 [Hosted App Link](https://insight-ai-assignment.vercel.app)
 
 ---
 
