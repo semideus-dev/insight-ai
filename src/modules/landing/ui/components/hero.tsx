@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { TextEffect } from "@/components/ui/motion/hero-text";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -25,6 +26,8 @@ const itemVariants = {
 };
 
 export default function Hero() {
+  const { data } = authClient.useSession();
+
   return (
     <motion.div
       className="h-screen flex items-center justify-center flex-col w-[90%]"
@@ -32,25 +35,25 @@ export default function Hero() {
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div className="hidden md:flex" variants={itemVariants}>
+      <motion.div variants={itemVariants}>
         <TextEffect
           per="word"
           as="h3"
           preset="blur"
-          className="text-6xl font-semibold"
+          className="text-3xl md:text-6xl font-semibold"
         >
           Talk to Text — Instantly!
         </TextEffect>
       </motion.div>
 
       <motion.div
-        className="mt-6 text-muted-foreground text-lg text-center w-1/2 flex flex-col items-center gap-6"
+        className="mt-6 text-muted-foreground text-lg text-center w-full md:w-1/2 flex flex-col items-center gap-6"
         variants={containerVariants}
       >
-        <motion.p variants={itemVariants}>
+        <motion.p variants={itemVariants} className="text-sm md:text-base">
           InsightAi transforms your meeting transcripts into clear, actionable
-          to-do lists using AI. No more note-taking — just automatic follow-ups,
-          organized and ready.
+          to-do lists using AI. No more note-taking — just organized automatic
+          follow-ups.
         </motion.p>
 
         <motion.div
@@ -61,17 +64,27 @@ export default function Hero() {
             className="flex items-center gap-6"
             variants={itemVariants}
           >
-            <Link href="/sign-in">
-              <Button className="bg-white h-12 px-8 text-base rounded-full hover:bg-white/70">
-                Get Started
+            {data?.session ? (
+              <Link href="/dashboard">
+                <Button className="bg-white h-12 px-8 text-base rounded-full hover:bg-white/70">
+                  Dashboard
+                </Button>
+              </Link>
+            ) : (
+              <Link href="/sign-in">
+                <Button className="bg-white h-12 px-8 text-base rounded-full hover:bg-white/70">
+                  Get Started
+                </Button>
+              </Link>
+            )}
+            <Link href="#features">
+              <Button
+                className="h-12 px-8 text-base rounded-full"
+                variant="outline"
+              >
+                Learn More
               </Button>
             </Link>
-            <Button
-              className="h-12 px-8 text-base rounded-full"
-              variant="outline"
-            >
-              Learn More
-            </Button>
           </motion.div>
         </motion.div>
       </motion.div>

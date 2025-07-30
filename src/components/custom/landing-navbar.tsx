@@ -14,7 +14,7 @@ export default async function Navbar() {
     <div className="fixed w-full h-16 z-10 flex items-center justify-center">
       <div className="border rounded-full bg-white/5 backdrop-blur-lg border-white/10 flex items-center w-[90%] md:w-[70%] mt-10 h-full justify-between p-2 px-8">
         <Link href="/" className="flex items-center gap-2">
-          <AppLogo className="text-white" width={30} height={30} />
+          <AppLogo className="text-primary" width={30} height={30} />
           <span className="text-2xl hidden md:flex font-semibold tracking-tight">
             InsightAI
           </span>

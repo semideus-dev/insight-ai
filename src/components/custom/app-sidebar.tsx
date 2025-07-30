@@ -20,7 +20,7 @@ export default function AppSidebar() {
   return (
     <Sidebar collapsible="icon" className="border-none">
       <SidebarHeader className="items-center">
-        <AppLogo width={45} height={45} className="text-white hover:text-primary transition-all duration-200" />
+        <AppLogo width={45} height={45} className="text-primary" />
       </SidebarHeader>
       <SidebarContent className="mt-2">
         <SidebarGroup>
@@ -30,7 +30,7 @@ export default function AppSidebar() {
                 <Link
                   href={item.link}
                   key={item.link}
-                  className="hover:bg-muted/80 rounded-xl p-2"
+                  className="hover:bg-muted/80 text-muted-foreground hover:text-white transition-all rounded-xl p-2"
                 >
                   <item.icon />
                 </Link>
